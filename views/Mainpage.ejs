@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Styles/mainstyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <div class="Main-div">
+        <form action="/" method="post">
+
+            <table id="Table">
+              <tr>
+                  <th>Id</th>
+                  <th>Employee Name</th>
+                  <th>Gender</th>
+                  <th>Age</th>
+                  <th>Department</th>
+              </tr>
+              <% for(var i=0;i<details.length;i++){  %>
+              <tr>
+                  <td><%=details[i].Id %></td>
+                  <td><%=details[i].Employee_name %></td>
+                  <td><%=details[i].Gender %></td>
+                  <td><%=details[i].Age %></td>
+                  <td><%=details[i].Department %></td>
+              </tr>
+              <% } %>
+              <tr>
+                <td><input type="number" name="id" placeholder="addId"></td>
+                <td><input type="text" name="name" placeholder="addname"></td>
+                <td><input type="text" name="gender" placeholder="gender"></td>
+                <td><input type="number" name="age" placeholder="age"></td>
+                <td><input type="Text" name="department" placeholder="dept"></td>
+              </tr>
+            </table>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>
